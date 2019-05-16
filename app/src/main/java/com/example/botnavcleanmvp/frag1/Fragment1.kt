@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.botnavcleanmvp.R
 import com.example.botnavcleanmvp.base.BaseFragment
 
@@ -16,6 +17,10 @@ class Fragment1 : BaseFragment<Fragment1Contract.View, Fragment1Contract.Present
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_1, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        Toast.makeText(context, "Frag 1", Toast.LENGTH_SHORT).show()
     }
 
 }
